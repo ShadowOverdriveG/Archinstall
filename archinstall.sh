@@ -1,6 +1,6 @@
-!#bin/bash
+#!bin/bash
 
-pacstrap /mnt  figlet
+pacman -S  figlet
 clear
 
 figlet Arch Linux
@@ -15,7 +15,7 @@ echo -e ------------------------------------
 echo -n "Con Swapon?:"
 read opcion
 
-if ( $opcion = s ); then
+if [ $opcion = s ]; then
 echo "con swap"
 figlet particionado
 sleep 1
@@ -68,7 +68,7 @@ echo "Debido a que no se como colocar la opcion de editar,lo tendras que hacer d
 echo "deberas escribir nano /etc/locale.gen y luego poner locale-gen y hwclock -w"
 echo "Ahora te toca a vos hacer lo demas :D"
 
-elif ( $opcion = n  ); then
+elif [ $opcion = n ]; then
 echo "sin swap"
 figlet particionado
 sleep 1
